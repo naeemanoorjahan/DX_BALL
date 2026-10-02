@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build dxball (mac)",
+      "type": "shell",
+      "command": "gcc -g \"${workspaceFolder}/dxball_game.c\" -o \"${workspaceFolder}/dxball\" -I$(brew --prefix raylib)/include -L$(brew --prefix raylib)/lib -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
